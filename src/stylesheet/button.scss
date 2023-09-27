@@ -1,0 +1,58 @@
+.btn {
+  border: none;
+  outline: none;
+  display: flex;
+  gap: $space-8;
+  justify-content: space-between;
+  justify-items: center;
+
+  .preIcon {
+    cursor: pointer;
+  }
+
+  .btnText {
+    margin: auto 0;
+  }
+
+  .postIcon {
+    cursor: pointer;
+  }
+
+  &.big {
+    border-radius: $border-radius-20 0;
+    padding-block: $space-12;
+    padding-inline: $space-16;
+    max-width: 13.1875rem;
+    max-height: 4rem;
+    @include font-style($font-weight-300, $font-size-20, 25px, $text-white);
+  }
+
+  &.medium {
+    border-radius: clamp(0.875rem, 0.7821rem + 0.3810vw, 1.125rem) 0;
+    padding-block: clamp(0.69rem, calc(1.99rem + -5.33vw), 0.94rem);
+    padding-inline: clamp(0.75rem, calc(0.66rem + 0.38vw), 1.00rem);
+    width: clamp(8.25rem, calc(7.04rem + 4.95vw), 11.50rem);
+    height: clamp(2.25rem, calc(2.16rem + 0.38vw), 2.50rem);
+    font-size: clamp(0.875rem, 0.7357rem + 0.5714vw, 1.1rem);;
+  }
+
+  &.small {
+    border-radius: $border-radius-14 0;
+    padding-block: $space-8;
+    padding-inline: $space-12;
+    max-width: 8.375rem;
+    max-height: 2.25rem;
+    @include font-style($font-weight-300, $font-size-16, 20px, $text-white);
+  }
+
+  &.primary {
+    background: $primary-green;
+    color: $text-white;
+  }
+
+  &.secondary {
+    border: 2px solid $primary-green;
+    background: $background-white;
+    color: $text-white;
+  }
+}
